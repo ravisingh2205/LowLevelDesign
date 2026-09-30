@@ -22,6 +22,7 @@ public class SplitwiseService {
     
     public Expense addExpense(Expense expense){
         validateExpense(expense.getGroupId(),expense.getPaidBy(),expense.getAmount(),expense.getSplits());
+        return expense;
     }
 
     private void validateExpense(String groupId, User paidBy, BigDecimal amount, List<Split> splits) {
